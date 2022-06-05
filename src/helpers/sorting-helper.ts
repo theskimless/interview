@@ -8,6 +8,9 @@
  * key = 'company'
  * sequence = ['apple', 'huawei']
  *
+ * Result:
+ * data = [{ company: 'apple' }, { company: 'huawei' }, { company: 'samsung' }]
+ *
  * should sort by 'someKey'
  * first comes objects with 'value2' then 'value1' then other values
  */
