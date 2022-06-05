@@ -1,0 +1,40 @@
+.wrapper {
+    width: 100%;
+    background: #fff;
+}
+
+.header {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.headerButtonWrapper {
+    width: 50%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.button {
+    cursor: pointer;
+    color: #000;
+    width: 100px;
+    padding: 5px 10px;
+    background: #ddd;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background: #ccc;
+}
+
+.item {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.item:hover:not(.itemActive) {
+    background: #eee;
+}
+.itemActive {
+    background: #999;
+}
