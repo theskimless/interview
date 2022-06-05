@@ -1,4 +1,4 @@
-import { Product } from '../types/products-types'
+import { Category, Product } from '../types/products-types'
 
 export const productsApi = {
 	fetchAllProducts: () => {
@@ -8,6 +8,6 @@ export const productsApi = {
 	},
 	fetchAllCategories: () => {
 		return fetch('https://dummyjson.com/products/categories')
-		.then(res => res.json()) as Promise<string[]>
+		.then(res => res.json()) as Promise<Category[]>
 	}
 }

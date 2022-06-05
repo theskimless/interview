@@ -12,41 +12,7 @@ const initialState: InitialState = {
 	categoriesList: null
 }
 
-export const actions = {
-	setProducts: createAction<Product[]>('products/setProducts'),
-	setCategories: createAction<Category[]>('products/setCategories')
-}
+export const actions = {}
 
 export default createReducer(initialState, builder => {
-	builder
-	.addCase(actions.setProducts, (state, action) => {
-		const { payload } = action
-
-		state.productsList = payload
-	})
-	.addCase(actions.setCategories, (state, action) => {
-		const { payload } = action
-
-		state.categoriesList = payload
-	})
-})
-
-export const getProducts = createAsyncThunk('products/getProducts', async (args, { dispatch }) => {
-	try {
-		const res = await productsApi.fetchAllProducts()
-		dispatch(actions.setProducts(res))
-	}
-	catch (e) {
-		console.error(e)
-	}
-})
-
-export const getCategories = createAsyncThunk('products/getCategories', async (args, { dispatch }) => {
-	try {
-		const res = await productsApi.fetchAllCategories()
-		dispatch(actions.setCategories(res))
-	}
-	catch (e) {
-		console.error(e)
-	}
 })

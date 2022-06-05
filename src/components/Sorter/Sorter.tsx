@@ -1,5 +1,6 @@
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import styles from './Sorter.module.css'
+import SorterItem from './SorterItem'
 
 type Props = {
 	list: string[]
@@ -10,43 +11,26 @@ const Sorter: FC<Props> = ({
 	list,
 	setList
 }) => {
-	const [selectedIndex, setSelectedIndex] = useState(-1)
-
-	const handleUpClick = () => {
-		const listCopy = list.slice()
-		const items = listCopy.splice(selectedIndex, 1)
-		listCopy.splice(selectedIndex - 1, 0, ...items)
-		setList(listCopy)
-		setSelectedIndex(-1)
-	}
-
-	const handleDownClick = () => {
-		const listCopy = list.slice()
-		const items = listCopy.splice(selectedIndex, 1)
-		listCopy.splice(selectedIndex + 1, 0, ...items)
-		setList(listCopy)
-		setSelectedIndex(-1)
-	}
-
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.header}>
 				<div className={styles.headerButtonWrapper}>
-					<button className={styles.button} onClick={handleUpClick}>UP &uarr;</button>
+					<button className={styles.button}>UP &uarr;</button>
 				</div>
 				<div className={styles.headerButtonWrapper}>
-					<button className={styles.button} onClick={handleDownClick}>DOWN &darr;</button>
+					<button className={styles.button}>DOWN &darr;</button>
 				</div>
 			</div>
 			<div>
 				{
 					list.map((item, index) => {
-						const active = index === selectedIndex
-
-						let className = styles.item
-						if(active) className += ` ${styles.itemActive}`
-
-						return <div key={item} className={className} onClick={() => setSelectedIndex(index)}>{item}</div>
+						return (
+							<SorterItem
+								active={false}
+								text={item}
+								onClick={() => {}}
+							/>
+						)
 					})
 				}
 			</div>
