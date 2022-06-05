@@ -1,4 +1,4 @@
-export const productsColumns = {
+export const productsColumns: any = {
 	id: {
 		title: 'Id'
 	},
