@@ -4,7 +4,7 @@
  * @param sequence contains sorting order
  * @param key object key
  *
- * data = [{ someKey: 'value3', someKey: 'value1', someKey: 'value2' }]
+ * data = [{ someKey: 'value3' }, { someKey: 'value1' }, { someKey: 'value2' }]
  * key = 'someKey'
  * sequence = ['value2', 'value1']
  *
