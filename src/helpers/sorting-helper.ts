@@ -4,9 +4,9 @@
  * @param sequence contains sorting order
  * @param key object key
  *
- * data = [{ someKey: 'value3' }, { someKey: 'value1' }, { someKey: 'value2' }]
- * key = 'someKey'
- * sequence = ['value2', 'value1']
+ * data = [{ company: 'samsung' }, { company: 'huawei' }, { company: 'apple' }]
+ * key = 'company'
+ * sequence = ['apple', 'huawei']
  *
  * should sort by 'someKey'
  * first comes objects with 'value2' then 'value1' then other values
