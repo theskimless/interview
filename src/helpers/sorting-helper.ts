@@ -10,8 +10,5 @@
  *
  * Result:
  * data = [{ company: 'apple' }, { company: 'huawei' }, { company: 'samsung' }]
- *
- * should sort by 'someKey'
- * first comes objects with 'value2' then 'value1' then other values
  */
 export const sortWithSequence = (data: any, key: any, sequence: any) => {}
